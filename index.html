@@ -3,457 +3,139 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Eric Brand — Home</title>
+  <title>Eric Brand - Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --navy:#062b63;
-      --navy2:#021d45;
-      --gold:#f4cd25;
-      --teal:#159697;
-      --ink:#102033;
-      --rule:#d8d8d8;
-    }
-    * { box-sizing: border-box; }
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: #ffffff;
-      overflow-x: hidden;
-    }
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: #000;
-      line-height: 1.45;
-    }
-    .page {
-      width: 100%;
-      max-width: 1024px;
-      margin: 0 auto;
-      background: #ffffff;
-      overflow: visible;
-    }
-    .hero {
-      width: 100vw;
-      margin-left: calc(50% - 50vw);
-      min-height: 668px;
-      color: #ffffff;
-      background:
-        radial-gradient(circle at 68% 42%, rgba(20, 86, 144, .34) 0%, rgba(6, 43, 99, .14) 32%, rgba(2, 20, 48, 0) 63%),
-        linear-gradient(112deg, #021638 0%, #062b63 100%);
-      overflow: hidden;
-    }
-    .hero-nav {
-      max-width: 1024px;
-      margin: 0 auto;
-      min-height: 89px;
-      padding: 22px 24px 18px 34px;
-      display: flex;
-      align-items: center;
-      gap: 34px;
-      background: rgba(2, 20, 48, .78);
-    }
-    .hero-brand {
-      margin-right: auto;
-      color: #ffffff;
-      font-size: 30px;
-      line-height: 1;
-      font-weight: 900;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-    .hero-links {
-      display: flex;
-      align-items: center;
-      gap: 38px;
-    }
-    .hero-link {
-      color: #ffffff;
-      font-size: 19px;
-      line-height: 1.2;
-      font-weight: 700;
-      text-decoration: none;
-      padding: 13px 0 12px;
-      border-bottom: 4px solid transparent;
-    }
-    .hero-link:hover,
-    .hero-link:focus {
-      border-bottom-color: var(--gold);
-    }
-    .hero-link.active {
-      border-bottom-color: var(--gold);
-    }
-    .hero-contact {
-      color: var(--gold);
-      border: 1px solid var(--gold);
-      padding: 13px 20px;
-      border-bottom-width: 1px;
-    }
-    .hero-contact:hover,
-    .hero-contact:focus {
-      background: rgba(244, 205, 37, .12);
-      border-bottom-color: var(--gold);
-    }
-    .mobile-menu {
-      display: none;
-      position: relative;
-    }
-    .hero-stage {
-      max-width: 1024px;
-      margin: 0 auto;
-      min-height: 579px;
-      position: relative;
-    }
-    .hero-copy {
-      position: relative;
-      z-index: 2;
-      padding: 111px 0 56px 63px;
-      width: 640px;
-    }
-    .hero-title {
-      margin: 0;
-      max-width: 640px;
-      color: #ffffff;
-      font-size: 56px;
-      line-height: 1.105;
-      font-weight: 900;
-      letter-spacing: 0;
-    }
-    .hero-blurb {
-      margin: 22px 0 0;
-      max-width: 410px;
-      color: #ffffff;
-      font-size: 20px;
-      line-height: 1.65;
-      font-weight: 400;
-    }
-    .hero-portrait {
-      position: absolute;
-      inset: 0 0 0 auto;
-      width: 464px;
-      min-height: 579px;
-      overflow: hidden;
-    }
-    .hero-portrait img {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      width: 464px;
-      max-width: none;
-      height: auto;
-      display: block;
-    }
-
-    .categories {
-      background: #f8f8f6;
-      padding: 54px 68px 52px;
-    }
-    .category-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      align-items: stretch;
-    }
-    .category {
-      min-height: 300px;
-      padding: 0 36px;
-      display: flex;
-      flex-direction: column;
-    }
-    .category:first-child {
-      padding-left: 0;
-    }
-    .category:last-child {
-      padding-right: 0;
-    }
-    .category + .category {
-      border-left: 1px solid var(--rule);
-    }
-    .category h2 {
-      margin: 0 0 18px;
-      color: var(--teal);
-      text-transform: uppercase;
-      letter-spacing: .25em;
-      font-size: 18px;
-      line-height: 1.15;
-      font-weight: 900;
-    }
-    .category p {
-      margin: 0;
-      font-size: 21px;
-      line-height: 1.5;
-      color: #000;
-    }
-    .category .spacer {
-      flex: 1 1 auto;
-      min-height: 42px;
-    }
-    .category a {
-      display: block;
-      border-top: 1px solid #9aa6b9;
-      padding-top: 20px;
-      color: #00266f;
-      font-size: 18px;
-      line-height: 1.45;
-      font-weight: 700;
-      text-decoration: none;
-    }
-    .category a:hover {
-      text-decoration: underline;
-    }
-    .arrow {
-      padding-left: 8px;
-      font-size: 24px;
-      line-height: 0;
-    }
-    .quote-band {
-      background: linear-gradient(115deg,#021638 0%,#062b63 100%);
-      color: #fff;
-      text-align: center;
-      padding: 38px 68px 36px;
-    }
-    .quote-inner {
-      max-width: 780px;
-      margin: 0 auto;
-      position: relative;
-    }
-    .quote-text {
-      margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 30px;
-      line-height: 1.25;
-      font-style: italic;
-      color: #ffffff;
-    }
-    .quote-mark {
-      color: var(--gold);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 54px;
-      line-height: 0;
-      font-weight: 700;
-      vertical-align: -18px;
-      padding: 0 14px;
-    }
-    .quote-source {
-      display: block;
-      margin-top: 14px;
-      font-size: 18px;
-      line-height: 1.35;
-      color: #ffffff;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    @media (max-width: 760px) {
-      .hero {
-        min-height: 0;
-      }
-      .hero-nav {
-        min-height: 78px;
-        padding: 24px 28px 18px;
-        gap: 18px;
-      }
-      .hero-brand {
-        font-size: 30px;
-      }
-      .hero-links {
-        display: none;
-      }
-      .mobile-menu {
-        display: block;
-        margin-left: auto;
-      }
-      .mobile-menu summary {
-        list-style: none;
-        width: 44px;
-        height: 36px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 6px;
-        cursor: pointer;
-      }
-      .mobile-menu summary::-webkit-details-marker {
-        display: none;
-      }
-      .mobile-menu summary span {
-        display: block;
-        width: 31px;
-        height: 3px;
-        background: #ffffff;
-        border-radius: 2px;
-        margin-left: auto;
-      }
-      .mobile-menu-list {
-        position: absolute;
-        top: 48px;
-        right: 0;
-        min-width: 190px;
-        background: rgba(2, 20, 48, .98);
-        border: 1px solid rgba(255,255,255,.18);
-        box-shadow: 0 14px 28px rgba(0,0,0,.28);
-        padding: 10px 0;
-        z-index: 20;
-      }
-      .mobile-menu-list a {
-        display: block;
-        color: #ffffff;
-        text-decoration: none;
-        font-size: 17px;
-        line-height: 1.2;
-        font-weight: 700;
-        padding: 12px 18px;
-        white-space: nowrap;
-      }
-      .mobile-menu-list a:hover,
-      .mobile-menu-list a:focus {
-        background: rgba(255,255,255,.08);
-      }
-      .mobile-menu-list .contact-link {
-        color: var(--gold);
-      }
-      .hero-stage {
-        display: block;
-        min-height: 0;
-      }
-      .hero-copy {
-        padding: 76px 28px 24px;
-        width: auto;
-      }
-      .hero-title {
-        font-size: clamp(48px, 13vw, 68px);
-        line-height: .98;
-        max-width: 520px;
-      }
-      .hero-blurb {
-        margin-top: 34px;
-        max-width: 440px;
-        font-size: 20px;
-        line-height: 1.55;
-      }
-      .hero-portrait {
-        position: static;
-        inset: auto;
-        min-height: 0;
-        margin-top: 14px;
-        width: 100%;
-      }
-      .hero-portrait img {
-        position: static;
-        width: 100%;
-        height: auto;
-      }
-    }
-    @media (max-width: 760px) {
-      .categories {
-        padding: 36px 28px;
-      }
-      .category-grid {
-        grid-template-columns: 1fr;
-      }
-      .category {
-        min-height: 0;
-        padding: 28px 0;
-        border-left: 0 !important;
-        border-top: 1px solid var(--rule);
-      }
-      .category:first-child {
-        border-top: 0;
-        padding-top: 0;
-      }
-      .category:last-child {
-        padding-bottom: 0;
-      }
-      .category p {
-        font-size: 19px;
-      }
-      .category .spacer {
-        min-height: 28px;
-      }
-      .quote-band {
-        padding: 34px 28px;
-      }
-      .quote-text {
-        font-size: 25px;
-      }
-      .quote-mark {
-        font-size: 42px;
-        padding: 0 8px;
-      }
-      .quote-source {
-        font-size: 16px;
-      }
-    }
-  </style>
+:root {
+  --navy: #062b63;
+  --navy2: #021d45;
+  --hero: #062f68;
+  --gold: #f4cd25;
+  --teal: #159697;
+  --ink: #102033;
+  --rule: #d8d8d8;
+  --paper: #f2eee6;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #fff; overflow-x: hidden; }
+body { font-family: Montserrat, Arial, Helvetica, sans-serif; color: var(--ink); line-height: 1.45; }
+a { color: inherit; }
+.page { max-width: 1024px; margin: 0 auto; background: #fff; overflow: visible; min-height: 100vh; }
+.site-nav-wrap { width: 100vw; margin-left: calc(50% - 50vw); background: var(--navy2); }
+.site-nav { max-width: 1024px; min-height: 89px; margin: 0 auto; padding: 22px 24px 18px 34px; display: flex; align-items: center; gap: 34px; color: #fff; }
+.brand { margin-right: auto; color: #fff; font-size: 30px; line-height: 1; font-weight: 900; text-decoration: none; white-space: nowrap; }
+.nav-links { display: flex; align-items: center; gap: 38px; }
+.nav-links a { color: #fff; font-size: 19px; line-height: 1.2; font-weight: 800; text-decoration: none; padding: 13px 0 12px; border-bottom: 4px solid transparent; }
+.nav-links a.active, .nav-links a:hover, .nav-links a:focus { border-bottom-color: var(--gold); }
+.nav-links a.contact { color: var(--gold); border: 1px solid var(--gold); padding: 13px 20px; border-bottom-width: 1px; }
+.nav-links a.contact:hover, .nav-links a.contact:focus { background: rgba(244, 205, 37, .12); }
+.mobile-menu { display: none; position: relative; margin-left: auto; }
+.mobile-menu summary { list-style: none; width: 44px; height: 36px; display: flex; flex-direction: column; justify-content: center; gap: 6px; cursor: pointer; }
+.mobile-menu summary::-webkit-details-marker { display: none; }
+.mobile-menu summary span { display: block; width: 31px; height: 3px; background: #fff; border-radius: 2px; margin-left: auto; }
+.mobile-menu-list { position: absolute; top: 48px; right: 0; min-width: 190px; background: rgba(2, 20, 48, .98); border: 1px solid rgba(255,255,255,.18); box-shadow: 0 14px 28px rgba(0,0,0,.28); padding: 10px 0; z-index: 20; }
+.mobile-menu-list a { display: block; color: #fff; text-decoration: none; font-size: 17px; line-height: 1.2; font-weight: 800; padding: 12px 18px; white-space: nowrap; }
+.mobile-menu-list .contact-link { color: var(--gold); }
+.hero { width: 100vw; margin-left: calc(50% - 50vw); color: #fff; background: linear-gradient(115deg, #021638 0%, #062f68 100%); overflow: hidden; }
+.hero-inner { max-width: 1024px; min-height: 579px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(360px, 464px); align-items: stretch; }
+.hero-copy { padding: 106px 32px 56px 63px; position: relative; z-index: 2; }
+.hero-title { margin: 0; color: #fff; font-size: 52px; line-height: 1.12; font-weight: 900; letter-spacing: 0; max-width: 650px; }
+.hero-blurb { margin: 24px 0 0; max-width: 455px; color: #fff; font-size: 20px; line-height: 1.62; font-weight: 500; }
+.hero-media { display: flex; align-items: flex-end; justify-content: center; background: transparent; overflow: hidden; }
+.hero-media img { width: 100%; max-width: 464px; height: auto; display: block; }
+.hero-media.framed { align-items: center; padding: 0 24px; }
+.hero-media.framed img { max-width: 360px; border: 8px solid #fff; box-shadow: 0 16px 30px rgba(0,0,0,.18); }
+.content { padding: 54px 68px 64px; }
+.categories { background: #f8f8f6; padding: 54px 68px 52px; }
+.category-grid { display: grid; grid-template-columns: repeat(3, 1fr); align-items: stretch; }
+.category { min-height: 300px; padding: 0 36px; display: flex; flex-direction: column; }
+.category:first-child { padding-left: 0; }
+.category:last-child { padding-right: 0; }
+.category + .category { border-left: 1px solid var(--rule); }
+.eyebrow, .category h2, .bucket h2 { margin: 0 0 18px; color: var(--teal); text-transform: uppercase; letter-spacing: .25em; font-size: 18px; line-height: 1.2; font-weight: 900; }
+p { font-size: 16px; line-height: 1.55; margin: 14px 0; }
+.category p { margin: 0; font-size: 21px; line-height: 1.5; color: #000; font-weight: 400; }
+.category .spacer { flex: 1 1 auto; min-height: 42px; }
+.category a { display: block; border-top: 1px solid #9aa6b9; padding-top: 20px; color: #00266f; font-size: 18px; line-height: 1.45; font-weight: 800; text-decoration: none; }
+.arrow { padding-left: 8px; font-size: 24px; line-height: 0; }
+.two-col { display: grid; grid-template-columns: minmax(0, 1fr) 270px; gap: 48px; align-items: start; }
+.resource-card { background: #319d9d; color: #fff; padding: 22px 20px; }
+.resource-card.light { background: var(--paper); color: var(--navy); }
+.resource-card + .resource-card { margin-top: 26px; }
+.resource-card h2 { color: inherit; font-size: 20px; line-height: 1.25; margin: 0 0 18px; }
+.resource-card p { color: inherit; font-size: 14px; font-weight: 500; }
+.resource-list { list-style: none; padding: 0; margin: 0; }
+.resource-list li { border-top: 1px solid rgba(255,255,255,.28); }
+.resource-card.light .resource-list li { border-top: 1px solid #d8d1c4; }
+.resource-list a, .resource-list .unlinked { display: block; padding: 10px 0; color: inherit; font-weight: 800; font-size: 14px; line-height: 1.3; text-decoration: none; }
+.resource-list a:hover, .resource-list a:focus { text-decoration: underline; }
+.contact-button { display: inline-block; border: 1px solid currentColor; color: inherit; text-decoration: none; font-weight: 800; padding: 12px 26px; margin-top: 8px; }
+.columns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 54px; }
+.bucket { border-top: 1px solid var(--rule); padding-top: 20px; }
+.link-list { list-style: none; padding: 0; margin: 0; }
+.link-list li { margin: 0 0 14px; }
+.link-list a, .link-list .unlinked { color: var(--navy); font-weight: 800; font-size: 15px; line-height: 1.35; text-decoration: none; }
+.link-list a:hover, .link-list a:focus { text-decoration: underline; }
+.topics { max-width: 650px; }
+.topics h2 { color: var(--navy); font-size: 20px; line-height: 1.25; margin: 28px 0 10px; border-bottom: 1px solid var(--rule); padding-bottom: 8px; }
+.topics ul { margin: 0 0 24px; padding-left: 18px; }
+.topics li { margin: 8px 0; font-size: 15px; }
+.blurb-band { width: 100vw; margin-left: calc(50% - 50vw); background: linear-gradient(115deg, #021638 0%, #062f68 100%); color: #fff; }
+.blurb-inner { max-width: 1024px; margin: 0 auto; padding: 34px 68px; display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 32px; align-items: center; }
+.blurb-inner p { color: #fff; font-size: 18px; margin: 0; }
+.blurb-inner img { width: 100%; display: block; border: 8px solid #fff; }
+.logo-marquee { border-bottom: 1px solid var(--rule); margin-bottom: 34px; overflow-x: auto; padding-bottom: 24px; }
+.logo-track { display: flex; gap: 52px; align-items: center; width: max-content; animation: logo-scroll 26s linear infinite; }
+.logo-track img { height: 67px; width: auto; flex: 0 0 auto; }
+.logo-track:hover { animation-play-state: paused; }
+@keyframes logo-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.quote-band { background: linear-gradient(115deg,#021638 0%,#062b63 100%); color: #fff; text-align: center; padding: 38px 68px 36px; }
+.quote-inner { max-width: 780px; margin: 0 auto; position: relative; }
+.quote-text { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: 30px; line-height: 1.25; font-style: italic; color: #fff; }
+.quote-mark { color: var(--gold); font-family: Georgia, "Times New Roman", serif; font-size: 54px; line-height: 0; font-weight: 700; vertical-align: -18px; padding: 0 14px; }
+.quote-source { display: block; margin-top: 14px; font-size: 18px; line-height: 1.35; color: #fff; font-family: Montserrat, Arial, Helvetica, sans-serif; }
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; min-height: 0; }
+  .hero-copy { padding: 68px 34px 26px; }
+  .hero-media { justify-content: center; }
+  .hero-media img { max-width: 520px; width: 88%; }
+}
+@media (max-width: 900px) {
+  .site-nav { min-height: 78px; padding: 24px 28px 18px; gap: 18px; }
+  .brand { font-size: 30px; }
+  .nav-links { display: none; }
+  .mobile-menu { display: block; }
+  .hero-title { font-size: clamp(42px, 12vw, 62px); line-height: 1; }
+  .hero-blurb { max-width: 440px; font-size: 20px; line-height: 1.55; }
+  .hero-media img { width: 100%; }
+  .content, .categories { padding: 36px 28px; }
+  .category-grid, .two-col, .columns, .blurb-inner { grid-template-columns: 1fr; }
+  .category { min-height: 0; padding: 28px 0; border-left: 0 !important; border-top: 1px solid var(--rule); }
+  .category:first-child { border-top: 0; padding-top: 0; }
+  .category:last-child { padding-bottom: 0; }
+  .category p { font-size: 19px; }
+  .category .spacer { min-height: 28px; }
+  .resource-card { margin-top: 24px; }
+  .quote-band { padding: 34px 28px; }
+  .quote-text { font-size: 25px; }
+  .quote-mark { font-size: 42px; padding: 0 8px; }
+  .quote-source { font-size: 16px; }
+}
+</style>
 </head>
-<body>
-  <main class="page">
-    <section class="hero" aria-label="Eric Brand homepage hero">
-      <nav class="hero-nav" aria-label="Primary navigation">
-        <a class="hero-brand" href="index.html">ERIC BRAND</a>
-        <div class="hero-links" aria-label="Desktop navigation">
-          <a class="hero-link active" href="index.html">Home</a>
-          <a class="hero-link" href="about.html">About</a>
-          <a class="hero-link" href="writing.html">Writing</a>
-          <a class="hero-link" href="speaking.html">Speaking</a>
-          <a class="hero-link" href="consulting.html">Consulting</a>
-          <a class="hero-link hero-contact" href="mailto:ericbrand@ericbrand.net">Contact</a>
-        </div>
-        <details class="mobile-menu">
-          <summary aria-label="Open navigation menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </summary>
-          <div class="mobile-menu-list">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="writing.html">Writing</a>
-            <a href="speaking.html">Speaking</a>
-            <a href="consulting.html">Consulting</a>
-            <a class="contact-link" href="mailto:ericbrand@ericbrand.net">Contact</a>
-          </div>
-        </details>
-      </nav>
-      <div class="hero-stage">
-        <div class="hero-copy">
-          <h1 class="hero-title">Messaging That<br>Gets Heard.<br>Stories That<br>Move People.</h1>
-          <p class="hero-blurb">I help organizations, leaders, and audiences of all kinds gain valuable insights &ndash; based on decades of experience across media, finance, and global tech.</p>
-        </div>
-        <div class="hero-portrait">
-          <img src="assets/home/eric-brand-headshot.png" alt="Eric Brand">
-        </div>
-      </div>
-    </section>
-
-    <section class="categories" aria-label="Services">
-      <div class="category-grid">
-        <article class="category">
-          <h2>Writing</h2>
-          <p>I’ve been a writer/producer of award-winning television shows and movies and a published author of books and essays.</p>
-          <div class="spacer"></div>
-          <a href="writing.html">See some past work and current projects <span class="arrow">→</span></a>
-        </article>
-
-        <article class="category">
-          <h2>Speaking</h2>
-          <p>I’ve entertained and informed diverse audiences about the media, marketing, and social issues.</p>
-          <div class="spacer"></div>
-          <a href="speaking.html">See some past talks and topic list <span class="arrow">→</span></a>
-        </article>
-
-        <article class="category">
-          <h2>Consulting</h2>
-          <p>I’ve held senior marketing roles for top financial firms, advised numerous others, and produced some of the world’s largest and most prestigious tech events.</p>
-          <div class="spacer"></div>
-          <a href="consulting.html">See some past clients and topic expertise <span class="arrow">→</span></a>
-        </article>
-      </div>
-    </section>
-
-    <section class="quote-band" aria-label="Testimonial">
-      <div class="quote-inner">
-        <p class="quote-text"><span class="quote-mark">“</span>You have been an icon for us at AllianceBernstein<span class="quote-mark">”</span></p>
-        <span class="quote-source">– Global Head of Marketing Events and Sponsorships</span>
-      </div>
-    </section>
-  </main>
-</body>
-</html>
+<body><main class="page">
+<div class="site-nav-wrap"><nav class="site-nav" aria-label="Primary navigation">
+      <a class="brand" href="index.html">ERIC BRAND</a>
+      <div class="nav-links"><a class="active" href="index.html">Home</a><a href="about.html">About</a><a href="writing.html">Writing</a><a href="speaking.html">Speaking</a><a href="consulting.html">Consulting</a><a class="contact" href="mailto:ericbrand@ericbrand.net">Contact</a></div>
+      <details class="mobile-menu"><summary aria-label="Open navigation menu"><span></span><span></span><span></span></summary><div class="mobile-menu-list"><a href="index.html">Home</a><a href="about.html">About</a><a href="writing.html">Writing</a><a href="speaking.html">Speaking</a><a href="consulting.html">Consulting</a><a class="contact-link" href="mailto:ericbrand@ericbrand.net">Contact</a></div></details>
+    </nav></div>
+<section class="hero"><div class="hero-inner"><div class="hero-copy"><h1 class="hero-title">Messaging That<br>Gets Heard.<br>Stories That<br>Move People.</h1><p class="hero-blurb">I help organizations, leaders, and audiences of all kinds gain valuable insights – based on decades of experience across media, finance, and global tech.</p></div><div class="hero-media"><img src="assets/home/eric-brand-headshot.png" alt="Eric Brand"></div></div></section>
+<section class="categories" aria-label="Services"><div class="category-grid">
+  <article class="category"><h2>Writing</h2><p>I've been a writer/producer of award-winning television shows and movies and a published author of books and essays.</p><div class="spacer"></div><a href="writing.html">See some past work and current projects <span class="arrow">→</span></a></article>
+  <article class="category"><h2>Speaking</h2><p>I've entertained and informed diverse audiences about the media, marketing, and social issues.</p><div class="spacer"></div><a href="speaking.html">See some past talks and topic list <span class="arrow">→</span></a></article>
+  <article class="category"><h2>Consulting</h2><p>I've held senior marketing roles for top financial firms, advised numerous others, and produced some of the world's largest and most prestigious tech events.</p><div class="spacer"></div><a href="consulting.html">See some past clients and topic expertise <span class="arrow">→</span></a></article>
+</div></section>
+<section class="quote-band" aria-label="Testimonial"><div class="quote-inner"><p class="quote-text"><span class="quote-mark">“</span>You have been an icon for us at AllianceBernstein<span class="quote-mark">”</span></p><span class="quote-source">– Global Head of Marketing Events and Sponsorships</span></div></section>
+</main></body></html>
