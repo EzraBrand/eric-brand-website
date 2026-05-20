@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Eric Brand - Consulting</title><style>
+    :root { --navy:#062b63; --navy2:#021d45; --gold:#f4cd25; --teal:#159697; --ink:#102033; --rule:#d8d8d8; --paper:#f2eee6; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background:#fff; }
+    body { font-family: Arial, Helvetica, sans-serif; color: var(--ink); line-height: 1.45; }
+    .page { max-width: 1024px; margin: 0 auto; background:#fff; min-height: 100vh; }
+    .site-nav { min-height: 89px; padding: 22px 24px 18px 34px; display:flex; align-items:center; gap:34px; background: var(--navy2); color:#fff; }
+    .brand { margin-right:auto; color:#fff; font-size:30px; line-height:1; font-weight:900; text-decoration:none; white-space:nowrap; }
+    .links { display:flex; align-items:center; gap:38px; }
+    .links a { color:#fff; font-size:19px; line-height:1.2; font-weight:700; text-decoration:none; padding:13px 0 12px; border-bottom:4px solid transparent; }
+    .links a.active, .links a:hover, .links a:focus { border-bottom-color: var(--gold); }
+    .links a.contact { color: var(--gold); border: 1px solid var(--gold); padding:13px 20px; border-bottom-width:1px; }
+    .links a.contact:hover, .links a.contact:focus { background: rgba(244,205,37,.12); border-bottom-color: var(--gold); }
+    .content { padding: 44px 68px 70px; }
+    .top-rule { height:6px; background:var(--navy); margin-bottom:42px; }
+    h1, h2, h3 { margin:0; }
+    h1, .eyebrow { color:var(--teal); text-transform:uppercase; letter-spacing:.28em; font-size:18px; line-height:1.2; font-weight:900; }
+    h2 { color: var(--navy); font-size:20px; line-height:1.25; margin: 28px 0 10px; }
+    p { font-size:16px; line-height:1.55; margin: 14px 0; }
+    .two-col { display:grid; grid-template-columns:minmax(0,1fr) 270px; gap:48px; align-items:start; }
+    .resource-card { background:#319d9d; color:#fff; padding:22px 20px; }
+    .resource-card.light { background:var(--paper); color:var(--navy); }
+    .resource-card h2 { color:inherit; font-size:20px; margin:0 0 18px; }
+    .resource-list { list-style:none; padding:0; margin:0; }
+    .resource-list li { border-top:1px solid rgba(255,255,255,.28); }
+    .resource-card.light .resource-list li { border-top:1px solid #d8d1c4; }
+    .resource-list a, .resource-list .unlinked { display:block; padding:10px 0; color:inherit; font-weight:800; font-size:14px; line-height:1.3; text-decoration:none; }
+    .resource-list a:hover, .resource-list a:focus { text-decoration:underline; }
+    .contact-button { display:inline-block; border:1px solid var(--teal); color:var(--teal); text-decoration:none; font-weight:800; padding:12px 26px; margin-top:8px; }
+    .feature-band { margin-bottom:42px; background:linear-gradient(115deg,#021638 0%,#062b63 100%); color:#fff; padding:28px 18px; display:grid; grid-template-columns: 1fr 330px; gap:24px; align-items:center; }
+    .feature-band p { color:#fff; font-size:18px; margin:0; }
+    .feature-band img { width:100%; border:8px solid #fff; display:block; }
+    .columns { display:grid; grid-template-columns:repeat(3, 1fr); gap:54px; }
+    .column { border-top:1px solid var(--rule); padding-top:20px; }
+    .column h2 { color:var(--teal); text-transform:uppercase; letter-spacing:.28em; font-size:17px; line-height:1.35; margin:0 0 18px; }
+    .link-list { list-style:none; padding:0; margin:0; }
+    .link-list li { margin:0 0 14px; }
+    .link-list a, .link-list .unlinked { color:var(--navy); font-weight:800; font-size:15px; line-height:1.35; text-decoration:none; }
+    .link-list a:hover, .link-list a:focus { text-decoration:underline; }
+    .topics { max-width:650px; }
+    .topics h2 { margin-top:28px; border-bottom:1px solid var(--rule); padding-bottom:8px; }
+    .topics ul { margin: 0 0 24px; padding-left:18px; }
+    .topics li { margin: 8px 0; font-size:15px; }
+    .logos { display:flex; align-items:center; justify-content:space-between; gap:20px; border-bottom:1px solid var(--rule); padding:0 0 28px; margin-bottom:34px; color:#333; font-size:24px; font-weight:700; }
+    .logo-text { white-space:nowrap; }
+    @media (max-width:760px) {
+      .site-nav { padding:24px 28px 18px; gap:18px; flex-wrap:wrap; }
+      .brand { width:100%; }
+      .links { gap:18px; flex-wrap:wrap; }
+      .links a { font-size:16px; padding:8px 0; }
+      .links a.contact { padding:8px 14px; }
+      .content { padding:36px 28px 54px; }
+      .two-col, .feature-band, .columns { grid-template-columns:1fr; }
+      .resource-card { margin-top:24px; }
+      .logos { align-items:flex-start; flex-direction:column; }
+    }
+</style></head>
+<body><main class="page">
+  <nav class="site-nav"><a class="brand" href="index.html">ERIC BRAND</a><div class="links"><a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="writing.html">Writing</a>
+        <a href="speaking.html">Speaking</a>
+        <a class="active" href="consulting.html">Consulting</a>
+        <a class="contact" href="mailto:ericbrand@ericbrand.net">Contact</a></div></nav>
+  <section class="content"><div class="logos"><span class="logo-text">MONARCH</span><span class="logo-text">Morgan Stanley</span><span class="logo-text">AB</span><span class="logo-text">Brown Brothers Harriman</span><span class="logo-text">citi</span></div>
+    <div class="two-col"><div><h1>About Me</h1><p>I'm a veteran marketer with extensive experience strategizing, creating, and delivering targeted messages to diverse global audiences. I've had senior marketing roles for some of the top financial firms in the world, including Morgan Stanley, AllianceBernstein, and Brown Brothers Harriman, and have advised startups and hedge funds on their marketing.</p><h1>Let's Discuss the Possibilities</h1><p>If you are preparing to fundraise, overdue on refreshing your materials, building a new or existing event, or struggling to communicate your message to a key audience, let's talk.</p><a class="contact-button" href="mailto:ericbrand@ericbrand.net">Contact</a></div>
+    <aside class="resource-card light"><h2>Downloadable resources</h2><ul class="resource-list">
+      <li><a href="assets/downloads/Eric%20Brand%20-%20Consulting.pdf">Eric Brand Consulting One-Pager</a></li>
+      <li><a href="assets/downloads/Hedge%20fund%20pitchbook%20before%20%26%20after.pdf">Hedge fund pitchbook before &amp; after</a></li>
+      <li><span class="unlinked" title="Source note: file too big for email">Video for institutional investor base</span></li>
+      <li><a href="assets/downloads/BBH%20communications%20branding%20suite.pdf">BBH communications branding suite</a></li>
+      <li><a href="assets/downloads/BKCG_White_Paper_-_Brand_Identity.pdf">Brand Identity white paper</a></li>
+      <li><a href="https://summit.ourcrowd.com/2023-summit-highlights/">Highlights from the OurCrowd Summit</a></li>
+      <li><a href="assets/downloads/OurCrowd%20Summit%202023%20-%20Printed%20Agenda%20-%20Single%20Pages.pdf">Agenda booklet for the OurCrowd Summit</a></li>
+    </ul></aside></div>
+  </section>
+</main></body></html>
