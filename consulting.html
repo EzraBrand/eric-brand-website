@@ -22,9 +22,9 @@
 html, body { margin: 0; padding: 0; background: #fff; overflow-x: hidden; }
 body { font-family: Montserrat, Arial, Helvetica, sans-serif; color: var(--ink); line-height: 1.45; }
 a { color: inherit; }
-.page { max-width: 1024px; margin: 0 auto; background: #fff; overflow: visible; min-height: 100vh; }
+.page { max-width: 1180px; margin: 0 auto; background: #fff; overflow: visible; min-height: 100vh; }
 .site-nav-wrap { width: 100vw; margin-left: calc(50% - 50vw); background: var(--navy2); }
-.site-nav { max-width: 1024px; min-height: 89px; margin: 0 auto; padding: 22px 24px 18px 34px; display: flex; align-items: center; gap: 34px; color: #fff; }
+.site-nav { max-width: 1180px; min-height: 89px; margin: 0 auto; padding: 22px 32px 18px; display: flex; align-items: center; gap: 34px; color: #fff; }
 .brand { margin-right: auto; color: #fff; font-size: 30px; line-height: 1; font-weight: 900; text-decoration: none; white-space: nowrap; }
 .nav-links { display: flex; align-items: center; gap: 38px; }
 .nav-links a { color: #fff; font-size: 19px; line-height: 1.2; font-weight: 800; text-decoration: none; padding: 13px 0 12px; border-bottom: 4px solid transparent; }
@@ -39,7 +39,7 @@ a { color: inherit; }
 .mobile-menu-list a { display: block; color: #fff; text-decoration: none; font-size: 17px; line-height: 1.2; font-weight: 800; padding: 12px 18px; white-space: nowrap; }
 .mobile-menu-list .contact-link { color: var(--gold); }
 .hero { width: 100vw; margin-left: calc(50% - 50vw); color: #fff; background: linear-gradient(115deg, #021638 0%, #062f68 100%); overflow: hidden; }
-.hero-inner { max-width: 1024px; min-height: 579px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(360px, 464px); align-items: stretch; }
+.hero-inner { max-width: 1180px; min-height: 579px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1.02fr) minmax(360px, .98fr); align-items: stretch; gap: 42px; padding: 0 32px; }
 .hero-copy { padding: 106px 32px 56px 63px; position: relative; z-index: 2; }
 .hero-title { margin: 0; color: #fff; font-size: 52px; line-height: 1.12; font-weight: 900; letter-spacing: 0; max-width: 650px; }
 .hero-blurb { margin: 24px 0 0; max-width: 455px; color: #fff; font-size: 20px; line-height: 1.62; font-weight: 500; }
@@ -88,19 +88,22 @@ p { font-size: 16px; line-height: 1.55; margin: 14px 0; }
 .blurb-inner { max-width: 1024px; margin: 0 auto; padding: 34px 68px; display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 32px; align-items: center; }
 .blurb-inner p { color: #fff; font-size: 18px; margin: 0; }
 .blurb-inner img { width: 100%; display: block; border: 8px solid #fff; }
-.blurb-inner.consulting-blurb { display: block; }
-.blurb-list { margin: 18px 0 0; padding-left: 20px; color: #fff; }
-.blurb-list li { margin: 8px 0; font-size: 18px; line-height: 1.35; }
-.logo-marquee { width: 100vw; margin-left: calc(50% - 50vw); overflow: hidden; background: #fff; border-bottom: 1px solid var(--rule); padding: 24px 0; }
-.logo-track { display: flex; align-items: center; gap: 54px; width: max-content; animation: logo-scroll 28s linear infinite; }
+.intro-band { width: 100vw; margin-left: calc(50% - 50vw); background: #fff; padding: 48px 32px 0; }
+.intro-copy { max-width: 940px; margin: 0 auto 34px; }
+.intro-copy p { color: var(--ink); font-size: 19px; line-height: 1.62; margin: 0; }
+.intro-copy ul { margin: 20px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 38px; }
+.intro-copy li { color: var(--ink); font-size: 18px; line-height: 1.35; padding: 9px 0 9px 20px; border-top: 1px solid rgba(16,32,51,.14); position: relative; }
+.intro-copy li:before { content: "•"; position: absolute; left: 0; color: var(--teal); font-weight: 900; }
+.logo-marquee { width: 100vw; margin: 8px 0 44px calc(50% - 50vw); overflow: hidden; background: #fff; border-top: 1px solid rgba(16,32,51,.12); border-bottom: 1px solid rgba(16,32,51,.12); padding: 22px 0; white-space: nowrap; }
+.logo-track { display: inline-flex; align-items: center; gap: 42px; width: max-content; animation: logo-scroll 34s linear infinite; }
 .logo-track:hover { animation-play-state: paused; }
-.client-logo { max-height: 68px; max-width: 260px; width: auto; height: auto; object-fit: contain; flex: 0 0 auto; }
+.client-logo { max-height: 58px; max-width: 210px; width: auto; height: auto; object-fit: contain; flex: 0 0 auto; }
 @keyframes logo-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-.bottom-feature { display: grid; grid-template-columns: minmax(0, 1fr) 330px; gap: 34px; align-items: center; margin-top: 44px; }
-.bottom-feature img { width: 100%; display: block; }
+.bottom-feature { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(300px, .85fr); gap: 0; align-items: stretch; margin-top: 48px; }
+.bottom-feature img { width: 100%; height: 100%; object-fit: cover; display: block; box-shadow: 0 18px 30px rgba(0,0,0,.14); }
 .bottom-feature .quote-band { width: auto; margin: 0; padding: 28px 24px; }
 .bottom-feature .quote-text { font-size: 25px; }
-.quote-band { background: linear-gradient(115deg,#021638 0%,#062b63 100%); color: #fff; text-align: center; padding: 38px 68px 36px; }
+.quote-band { background: #242424; color: #fff; text-align: center; padding: 38px 68px 36px; }
 .quote-inner { max-width: 780px; margin: 0 auto; position: relative; }
 .quote-text { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: 30px; line-height: 1.25; font-style: italic; color: #fff; }
 .quote-mark { color: var(--gold); font-family: Georgia, "Times New Roman", serif; font-size: 54px; line-height: 0; font-weight: 700; vertical-align: -18px; padding: 0 14px; }
@@ -120,7 +123,7 @@ p { font-size: 16px; line-height: 1.55; margin: 14px 0; }
   .hero-blurb { max-width: 440px; font-size: 20px; line-height: 1.55; }
   .hero-media img { width: 100%; }
   .content, .categories { padding: 36px 28px; }
-  .category-grid, .two-col, .columns, .blurb-inner, .bottom-feature { grid-template-columns: 1fr; }
+  .category-grid, .two-col, .columns, .blurb-inner, .bottom-feature, .intro-copy ul { grid-template-columns: 1fr; }
   .category { min-height: 0; padding: 28px 0; border-left: 0 !important; border-top: 1px solid var(--rule); }
   .category:first-child { border-top: 0; padding-top: 0; }
   .category:last-child { padding-bottom: 0; }
@@ -141,7 +144,7 @@ p { font-size: 16px; line-height: 1.55; margin: 14px 0; }
       <details class="mobile-menu"><summary aria-label="Open navigation menu"><span></span><span></span><span></span></summary><div class="mobile-menu-list"><a href="index.html">Home</a><a href="about.html">About</a><a href="writing.html">Writing</a><a href="speaking.html">Speaking</a><a href="consulting.html">Consulting</a><a class="contact-link" href="mailto:ericbrand@ericbrand.net">Contact</a></div></details>
     </nav></div>
 <section class="hero"><div class="hero-inner"><div class="hero-copy"><h1 class="hero-title">Clarify Your<br>Brand and<br>Connect with<br>Your Audience</h1><p class="hero-blurb">I help companies big and small identify a high-level story that powers success—in sales, marketing, fundraising, and recruiting – and create event content and materials that get results.</p></div><div class="hero-media framed-wide"><img src="assets/docx/image4.png" alt="Eric Brand presenting"></div></div></section>
-<section class="blurb-band"><div class="blurb-inner consulting-blurb"><p>Most companies (and individuals too!) don’t have a marketing problem. They have a messaging problem. They know their business but not how to communicate its benefits effectively, saying what they want to say and not what their audience needs to hear. I help clients:</p><ul class="blurb-list"><li>Define what they really are</li><li>Clarify what they need to say</li><li>Communicate it effectively across channels</li><li>And I advise events on top content and promotion</li></ul></div></section>
+<section class="intro-band"><div class="intro-copy"><p>Most companies (and individuals too!) don’t have a marketing problem. They have a messaging problem. They know their business but not how to communicate its benefits effectively, saying what they want to say and not what their audience needs to hear. I help clients:</p><ul><li>Define what they really are</li><li>Clarify what they need to say</li><li>Communicate it effectively across channels</li><li>And I advise events on top content and promotion</li></ul></div></section>
 <section class="logo-marquee" aria-label="Representative organizations"><div class="logo-track"><img class="client-logo" src="assets/docx/image5.png" alt="Morgan Stanley"><img class="client-logo" src="assets/docx/image6.png" alt="Brown Brothers Harriman"><img class="client-logo" src="assets/docx/image7.png" alt="AllianceBernstein"><img class="client-logo" src="assets/docx/image8.jpeg" alt="Lazard Asset Management"><img class="client-logo" src="assets/docx/image9.png" alt="Citi"><img class="client-logo" src="assets/docx/image10.png" alt="First Avenue"><img class="client-logo" src="assets/docx/image11.png" alt="Monarch Alternative Capital"><img class="client-logo" src="assets/docx/image12.png" alt="Mesirow"><img class="client-logo" src="assets/docx/image13.png" alt="GSRM"><img class="client-logo" src="assets/docx/image5.png" alt="" aria-hidden="true"><img class="client-logo" src="assets/docx/image6.png" alt="" aria-hidden="true"><img class="client-logo" src="assets/docx/image7.png" alt="" aria-hidden="true"><img class="client-logo" src="assets/docx/image8.jpeg" alt="" aria-hidden="true"><img class="client-logo" src="assets/docx/image9.png" alt="" aria-hidden="true"><img class="client-logo" src="assets/docx/image10.png" alt="" aria-hidden="true"><img class="client-logo" src="assets/docx/image11.png" alt="" aria-hidden="true"><img class="client-logo" src="assets/docx/image12.png" alt="" aria-hidden="true"><img class="client-logo" src="assets/docx/image13.png" alt="" aria-hidden="true"></div></section>
 <section class="content"><div class="two-col"><div><h2 class="eyebrow">About Me</h2><p>I’m a veteran marketer with extensive experience strategizing, creating, and delivering targeted messages to diverse global audiences. I’ve had senior marketing roles for some of the top financial firms in the world, including Morgan Stanley, AllianceBernstein, and Brown Brothers Harriman, and have advised startups and hedge funds on their marketing. I also brandied, innovated, and executed content and promotion for the OurCrowd Global Investor Summit, the largest investor event in the Middle East.</p></div>
 <aside><div class="resource-card"><h2>Let’s discuss the possibilities</h2><p>If you are preparing to fundraise, overdue on refreshing your materials, building a new or existing event, or in any way struggling to communicate your message to a key audience, let’s talk. Engagements can be general or task based, and billed hourly or by project.</p><a class="contact-button" href="mailto:ericbrand@ericbrand.net">Contact</a></div>
