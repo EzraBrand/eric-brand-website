@@ -40,6 +40,7 @@ a { color: inherit; }
 .mobile-menu-list .contact-link { color: var(--gold); }
 .hero { width: 100vw; margin-left: calc(50% - 50vw); color: #fff; background: linear-gradient(115deg, #021638 0%, #062f68 100%); overflow: hidden; }
 .hero-inner { max-width: 1180px; min-height: 579px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1.02fr) minmax(360px, .98fr); align-items: stretch; gap: 42px; padding: 0 32px; }
+.hero .hero-inner { grid-template-columns: minmax(0, .86fr) minmax(540px, 1.14fr); gap: 24px; }
 .hero-copy { padding: 106px 32px 56px 63px; position: relative; z-index: 2; }
 .hero-title { margin: 0; color: #fff; font-size: 52px; line-height: 1.12; font-weight: 900; letter-spacing: 0; max-width: 650px; }
 .hero-blurb { margin: 24px 0 0; max-width: 455px; color: #fff; font-size: 20px; line-height: 1.62; font-weight: 500; }
@@ -48,7 +49,8 @@ a { color: inherit; }
 .hero-media.framed { align-items: center; padding: 0 24px; }
 .hero-media.framed img { max-width: 360px; border: 8px solid #fff; box-shadow: 0 16px 30px rgba(0,0,0,.18); }
 .hero-media.framed-wide { align-items: center; padding: 0 24px; }
-.hero-media.framed-wide img { max-width: 520px; border: 8px solid #fff; box-shadow: 0 16px 30px rgba(0,0,0,.18); }
+.hero .hero-media.framed-wide { padding-left: 0; padding-right: 0; }
+.hero-media.framed-wide img { max-width: 600px; border: 8px solid #fff; box-shadow: 0 16px 30px rgba(0,0,0,.18); }
 .hero-media.no-buffer img { border: 0; box-shadow: none; }
 .content { padding: 54px 68px 64px; }
 .categories { background: #f8f8f6; padding: 54px 68px 52px; }
@@ -101,6 +103,7 @@ p { font-size: 16px; line-height: 1.55; margin: 14px 0; }
 .quote-source { display: block; margin-top: 14px; font-size: 18px; line-height: 1.35; color: #fff; font-family: Montserrat, Arial, Helvetica, sans-serif; }
 @media (max-width: 900px) {
   .hero-inner { grid-template-columns: 1fr; min-height: 0; }
+  .hero .hero-inner { grid-template-columns: 1fr; }
   .hero-copy { padding: 68px 34px 26px; }
   .hero-media { justify-content: center; }
   .hero-media img { max-width: 520px; width: 88%; }
