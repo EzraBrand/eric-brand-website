@@ -27,47 +27,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
   <style>
-:root {
-  --navy: #062b63;
-  --navy2: #021d45;
-  --hero: #062f68;
-  --gold: #f4cd25;
-  --teal: #159697;
-  --ink: #102033;
-  --rule: #d8d8d8;
-  --paper: #f2eee6;
-}
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; background: #fff; overflow-x: hidden; }
-body { font-family: Montserrat, Arial, Helvetica, sans-serif; color: var(--ink); line-height: 1.45; }
-a { color: inherit; }
-.page { max-width: 1180px; margin: 0 auto; background: #fff; overflow: visible; min-height: 100vh; }
-.site-nav-wrap { width: 100vw; margin-left: calc(50% - 50vw); background: var(--navy2); }
-.site-nav { max-width: 1180px; min-height: 89px; margin: 0 auto; padding: 22px 32px 18px; display: flex; align-items: center; gap: 34px; color: #fff; }
-.brand { margin-right: auto; color: #fff; font-size: 30px; line-height: 1; font-weight: 900; text-decoration: none; white-space: nowrap; }
-.nav-links { display: flex; align-items: center; gap: 38px; }
-.nav-links a { color: #fff; font-size: 19px; line-height: 1.2; font-weight: 800; text-decoration: none; padding: 13px 0 12px; border-bottom: 4px solid transparent; }
-.nav-links a.active, .nav-links a:hover, .nav-links a:focus { border-bottom-color: var(--gold); }
-.nav-links a.contact { color: var(--gold); border: 1px solid var(--gold); padding: 13px 20px; border-bottom-width: 1px; }
-.nav-links a.contact:hover, .nav-links a.contact:focus { background: rgba(244, 205, 37, .12); }
-.mobile-menu { display: none; position: relative; margin-left: auto; }
-.mobile-menu summary { list-style: none; width: 44px; height: 36px; display: flex; flex-direction: column; justify-content: center; gap: 6px; cursor: pointer; }
-.mobile-menu summary::-webkit-details-marker { display: none; }
-.mobile-menu summary span { display: block; width: 31px; height: 3px; background: #fff; border-radius: 2px; margin-left: auto; }
-.mobile-menu-list { position: absolute; top: 48px; right: 0; min-width: 190px; background: rgba(2, 20, 48, .98); border: 1px solid rgba(255,255,255,.18); box-shadow: 0 14px 28px rgba(0,0,0,.28); padding: 10px 0; z-index: 20; }
-.mobile-menu-list a { display: block; color: #fff; text-decoration: none; font-size: 17px; line-height: 1.2; font-weight: 800; padding: 12px 18px; white-space: nowrap; }
-.mobile-menu-list .contact-link { color: var(--gold); }
+.hero-media { padding-top: 0; }
+.hero-media img { mix-blend-mode: normal; }
 .hero { width: 100vw; margin-left: calc(50% - 50vw); color: #fff; background: linear-gradient(115deg, #021638 0%, #062f68 100%); overflow: hidden; }
-.hero-inner { max-width: 1180px; min-height: 579px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1.02fr) minmax(360px, .98fr); align-items: stretch; gap: 42px; padding: 0 32px; }
 .hero .hero-inner { grid-template-columns: minmax(0, .86fr) minmax(540px, 1.14fr); gap: 24px; }
-.hero-copy { padding: 106px 32px 56px 63px; position: relative; z-index: 2; }
-.hero-title { margin: 0; color: #fff; font-size: 67px; line-height: 1.01; font-weight: 900; letter-spacing: 0; max-width: 700px; }
-.hero-blurb { margin: 24px 0 0; max-width: 455px; color: #fff; font-size: 20px; line-height: 1.62; font-weight: 500; }
 .hero-media { display: flex; align-items: flex-end; justify-content: center; background: transparent; overflow: hidden; }
 .hero-media img { width: 100%; max-width: 464px; height: auto; display: block; }
-.hero-media.framed { align-items: center; padding: 0 24px; }
-.hero-media.framed img { max-width: 360px; border: 8px solid #fff; box-shadow: 0 16px 30px rgba(0,0,0,.18); }
 .hero-media.framed-wide { align-items: center; padding: 0 24px; }
 .hero .hero-media.framed-wide { padding-left: 0; padding-right: 0; }
 .hero-media.framed-wide img { max-width: 600px; border: 8px solid #fff; box-shadow: 0 16px 30px rgba(0,0,0,.18); }
@@ -77,97 +44,51 @@ a { color: inherit; }
 .about-hero .hero-copy { padding: 48px 0 56px; }
 .about-hero .hero-media { padding-top: 43px; }
 .ai-position-about { margin-top: 32px; }
-.content { padding: 54px 68px 64px; }
-.categories { background: #f8f8f6; padding: 54px 68px 52px; }
-.category-grid { display: grid; grid-template-columns: repeat(3, 1fr); align-items: stretch; }
-.category { min-height: 300px; padding: 0 36px; display: flex; flex-direction: column; }
-.category:first-child { padding-left: 0; }
-.category:last-child { padding-right: 0; }
-.category + .category { border-left: 1px solid var(--rule); }
-.eyebrow, .category h2, .bucket h2 { margin: 0 0 18px; color: var(--teal); text-transform: uppercase; letter-spacing: .25em; font-size: 18px; line-height: 1.2; font-weight: 900; }
-p { font-size: 16px; line-height: 1.55; margin: 14px 0; }
-.category p { margin: 0; font-size: 21px; line-height: 1.5; color: #000; font-weight: 400; }
-.category .spacer { flex: 1 1 auto; min-height: 42px; }
-.category a { display: block; border-top: 1px solid #9aa6b9; padding-top: 20px; color: #00266f; font-size: 18px; line-height: 1.45; font-weight: 800; text-decoration: none; }
-.arrow { padding-left: 8px; font-size: 24px; line-height: 0; }
-.two-col { display: grid; grid-template-columns: minmax(0, 1fr) 270px; gap: 48px; align-items: start; }
-.resource-card { background: #319d9d; color: #fff; padding: 22px 20px; }
-.resource-card.light { background: var(--paper); color: var(--navy); }
-.resource-card + .resource-card { margin-top: 26px; }
-.resource-card h2 { color: inherit; font-size: 20px; line-height: 1.25; margin: 0 0 18px; }
-.resource-card p { color: inherit; font-size: 14px; font-weight: 500; }
-.resource-list { list-style: none; padding: 0; margin: 0; }
-.resource-list li { border-top: 1px solid rgba(255,255,255,.28); }
-.resource-card.light .resource-list li { border-top: 1px solid #d8d1c4; }
-.resource-list a, .resource-list .unlinked { display: block; padding: 10px 0; color: inherit; font-weight: 800; font-size: 14px; line-height: 1.3; text-decoration: none; }
-.resource-list a:hover, .resource-list a:focus { text-decoration: underline; }
-.contact-button { display: inline-block; border: 1px solid currentColor; color: inherit; text-decoration: none; font-weight: 800; padding: 12px 26px; margin-top: 8px; }
-.columns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 54px; }
-.bucket { border-top: 1px solid var(--rule); padding-top: 20px; }
-.link-list { list-style: none; padding: 0; margin: 0; }
-.link-list li { margin: 0 0 14px; }
-.link-list a, .link-list .unlinked { color: var(--navy); font-weight: 800; font-size: 15px; line-height: 1.35; text-decoration: none; }
-.link-list a:hover, .link-list a:focus { text-decoration: underline; }
-.topics { max-width: 650px; }
-.topics h2 { color: var(--navy); font-size: 20px; line-height: 1.25; margin: 28px 0 10px; border-bottom: 1px solid var(--rule); padding-bottom: 8px; }
-.topics ul { margin: 0 0 24px; padding-left: 18px; }
-.topics li { margin: 8px 0; font-size: 15px; }
-.blurb-band { width: 100vw; margin-left: calc(50% - 50vw); background: linear-gradient(115deg, #021638 0%, #062f68 100%); color: #fff; }
-.blurb-inner { max-width: 1024px; margin: 0 auto; padding: 34px 68px; display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 32px; align-items: center; }
-.blurb-inner p { color: #fff; font-size: 18px; margin: 0; }
-.blurb-inner img { width: 100%; display: block; border: 8px solid #fff; }
-.logo-marquee { border-bottom: 1px solid var(--rule); margin-bottom: 34px; overflow-x: auto; padding-bottom: 24px; }
-.logo-track { display: flex; gap: 52px; align-items: center; width: max-content; animation: logo-scroll 26s linear infinite; }
-.logo-track img { height: 67px; width: auto; flex: 0 0 auto; }
-.logo-track:hover { animation-play-state: paused; }
-@keyframes logo-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-.quote-band { width: 100vw; margin-left: calc(50% - 50vw); background: #242424; color: #fff; text-align: center; padding: 38px 68px 36px; }
-.quote-inner { max-width: 780px; margin: 0 auto; position: relative; }
-.quote-text { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: 30px; line-height: 1.25; font-style: italic; color: #fff; }
-.quote-mark { color: var(--gold); font-family: Georgia, "Times New Roman", serif; font-size: 54px; line-height: 0; font-weight: 700; vertical-align: -18px; padding: 0 14px; }
-.quote-source { display: block; margin-top: 14px; font-size: 18px; line-height: 1.35; color: #fff; font-family: Montserrat, Arial, Helvetica, sans-serif; }
 @media (max-width: 1100px) {
-  .hero-inner { grid-template-columns: 1fr; min-height: 0; }
   .hero .hero-inner { grid-template-columns: 1fr; }
-  .hero-copy { padding: 68px 34px 26px; }
   .hero-media { justify-content: center; }
-  .hero-media img { max-width: 520px; width: 88%; }
 }
 @media (max-width: 1100px) {
-  .site-nav { min-height: 78px; padding: 24px 28px 18px; gap: 18px; }
-  .brand { font-size: 30px; }
-  .nav-links { display: none; }
-  .mobile-menu { display: block; }
-  .hero-title { font-size: clamp(42px, 12vw, 62px); line-height: 1; }
-  .hero-blurb { max-width: 440px; font-size: 20px; line-height: 1.55; }
-  .hero-media img { width: 100%; }
   .hero-media.framed-wide { padding-bottom: 32px; }
   .about-hero .hero-media { padding-top: 0; }
   .about-hero .hero-inner { padding: 0 28px; }
   .about-hero .hero-copy { padding: 58px 0 26px; }
   .about-hero .hero-media { padding: 0 0 32px; }
-  .content, .categories { padding: 36px 28px; }
-  .category-grid, .two-col, .columns, .blurb-inner { grid-template-columns: 1fr; }
-  .category { min-height: 0; padding: 28px 0; border-left: 0 !important; border-top: 1px solid var(--rule); }
-  .category:first-child { border-top: 0; padding-top: 0; }
-  .category:last-child { padding-bottom: 0; }
-  .category p { font-size: 19px; }
-  .category .spacer { min-height: 28px; }
-  .resource-card { margin-top: 24px; }
-  .quote-band { padding: 34px 28px; }
-  .quote-text { font-size: 25px; }
-  .quote-mark { font-size: 42px; padding: 0 8px; }
-  .quote-source { font-size: 16px; }
 }
-</style>
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Eric Brand",
+    "url": "https://ericbrand.net/",
+    "image": "https://ericbrand.net/assets/eric-brand-home-headshot.png",
+    "jobTitle": "Writer, Marketing Consultant, and Speaker",
+    "knowsAbout": [
+      "Writing",
+      "Marketing strategy",
+      "Brand messaging",
+      "Public speaking",
+      "Financial services marketing",
+      "Event content"
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/in/eric-brand-writer-speaker-marketer/"
+    ]
+  }
+  </script>
 </head>
-<body><main class="page">
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header>
 <div class="site-nav-wrap"><nav class="site-nav" aria-label="Primary navigation">
       <a class="brand" href="/">ERIC BRAND</a>
-      <div class="nav-links"><a href="/">Home</a><a class="active" href="about.html">About</a><a href="writing.html">Writing</a><a href="speaking.html">Speaking</a><a href="consulting.html">Consulting</a><a class="contact" href="mailto:ericbrand@ericbrand.net">Contact</a></div>
-      <details class="mobile-menu"><summary aria-label="Open navigation menu"><span></span><span></span><span></span></summary><div class="mobile-menu-list"><a href="/">Home</a><a href="about.html">About</a><a href="writing.html">Writing</a><a href="speaking.html">Speaking</a><a href="consulting.html">Consulting</a><a class="contact-link" href="mailto:ericbrand@ericbrand.net">Contact</a></div></details>
+      <div class="nav-links"><a href="/">Home</a><a class="active" aria-current="page" href="about.html">About</a><a href="writing.html">Writing</a><a href="speaking.html">Speaking</a><a href="consulting.html">Consulting</a><a class="contact" href="mailto:ericbrand@ericbrand.net">Contact</a></div>
+      <details class="mobile-menu"><summary aria-label="Open navigation menu"><span></span><span></span><span></span></summary><div class="mobile-menu-list"><a href="/">Home</a><a href="about.html" aria-current="page">About</a><a href="writing.html">Writing</a><a href="speaking.html">Speaking</a><a href="consulting.html">Consulting</a><a class="contact-link" href="mailto:ericbrand@ericbrand.net">Contact</a></div></details>
     </nav></div>
-<section class="hero about-hero"><div class="hero-inner"><div class="hero-copy"><h1 class="hero-title">Published Author.<br>Veteran Marketer.<br>Engaging Speaker.</h1></div><div class="hero-media framed-wide no-buffer"><img src="assets/about-hero-image.png" alt="Eric Brand interview"></div></div></section>
+</header>
+<main id="main-content" class="page">
+<section class="hero about-hero"><div class="hero-inner"><div class="hero-copy"><h1 class="hero-title">Published Author.<br>Veteran Marketer.<br>Engaging Speaker.</h1></div><div class="hero-media framed-wide no-buffer"><picture><source type="image/avif" srcset="assets/about-hero-image-640.avif 640w, assets/about-hero-image-1109.avif 1109w" sizes="(max-width: 1100px) 100vw, 600px"><source type="image/webp" srcset="assets/about-hero-image-640.webp 640w, assets/about-hero-image-1109.webp 1109w" sizes="(max-width: 1100px) 100vw, 600px"><img src="assets/about-hero-image.png" alt="Eric Brand interview" width="1109" height="674" fetchpriority="high" decoding="async"></picture></div></div></section>
 <section class="content"><div class="two-col"><div><h2 class="eyebrow">About Eric</h2>
 <p>Eric Brand is a writer and marketer with extensive experience creating and delivering targeted messages to global audiences.</p>
 <p>He has been a writer/producer of network television shows (such as “Cosby”), wrote the screenplay for Gene Roddenberry’s final movie project, and was Managing Editor of Metropolis magazine. Eric’s essays, both serious and humorous, have been published in numerous outlets (such as the Washington Post and Times of Israel). His book, <em>Gladstone</em>, a biography of the 19th century British Prime Minister for Chelsea House Publishers, went into a second printing. His latest book project, with a publication target of 2026, is a unique take on Jewish history.</p>
@@ -175,11 +96,24 @@ p { font-size: 16px; line-height: 1.55; margin: 14px 0; }
 <p>He has entertained and informed diverse audiences about marketing, the media, and Jewish issues at numerous venues, including Harvard and Bar-Ilan universities, the Hadassah National Conference, TLV Talks, and various television appearances.</p>
 <p>Eric was born in Manhattan and earned a Bachelor's Degree at Stony Brook University, where he co-founded the award-winning undergraduate feature newspaper, made Dean’s List three times, and was thrown out of school on academic grounds three times.</p>
 <section class="ai-position-about" aria-labelledby="about-ai-position"><h2 id="about-ai-position" class="eyebrow">My Position on AI</h2><p>I use AI as a well-informed, eager (but occasionally clueless) assistant to produce useful research in real time and to generate ideas I might not have thought of otherwise. But four-year-olds can’t (yet) replicate the insight, individualization, and gut that only experience brings. No matter how good the boat, it still needs a captain.</p></section>
-</div><aside class="resource-card"><h2>Downloadable Resources</h2><ul class="resource-list">
+</div><aside><div class="resource-card"><h2>Downloadable Resources</h2><ul class="resource-list">
 <li><a href="assets/Eric Brand - Speaking.pdf" target="_blank" rel="noopener">Speaking One-Pager</a></li>
 <li><a href="assets/Eric Brand - Consulting.pdf" target="_blank" rel="noopener">Consulting One-Pager</a></li>
 <li><a href="assets/Eric Brand - Bio - May 2026.pdf" target="_blank" rel="noopener">Bio</a></li>
 <li><a href="assets/Eric Brand headshot.png" target="_blank" rel="noopener">Photo</a></li>
-</ul></aside></div></section>
+</ul></div><div class="resource-card light"><h2>Connect</h2><ul class="resource-list"><li><a href="https://www.linkedin.com/in/eric-brand-writer-speaker-marketer/" rel="me">My LinkedIn Profile</a></li></ul></div></aside></div></section>
 <section class="quote-band" aria-label="Testimonial"><div class="quote-inner"><p class="quote-text"><span class="quote-mark">“</span>Fun read and thought provoking. Mr. Brand has done it again!<span class="quote-mark">”</span></p><span class="quote-source">— Comment on online article</span></div></section>
-</main></body></html>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="mailto:ericbrand@ericbrand.net">Email</a>
+      <a href="https://www.linkedin.com/in/eric-brand-writer-speaker-marketer/" rel="me">My LinkedIn Profile</a>
+      <a href="writing.html">Writing</a>
+      <a href="speaking.html">Speaking</a>
+      <a href="consulting.html">Consulting</a>
+    </div>
+    <div class="copyright">© 2026 Eric Brand</div>
+  </div>
+</footer>
+</body></html>
