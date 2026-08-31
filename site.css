@@ -71,6 +71,7 @@ p { font-size: 16px; line-height: 1.55; margin: 14px 0; }
 .link-list { list-style: none; padding: 0; margin: 0; }
 .link-list li { margin: 0 0 14px; }
 .link-list a, .link-list .unlinked { color: var(--navy); font-weight: 800; font-size: 15px; line-height: 1.35; text-decoration: none; }
+.link-note { color: #4c5868; font-size: 13px; font-weight: 500; }
 .link-list a:hover, .link-list a:focus { text-decoration: underline; }
 .topics { max-width: 650px; }
 .topics h2, .topics h3 { color: var(--navy); font-size: 20px; line-height: 1.25; margin: 28px 0 10px; border-bottom: 1px solid var(--rule); padding-bottom: 8px; }
@@ -90,6 +91,14 @@ p { font-size: 16px; line-height: 1.55; margin: 14px 0; }
 .quote-text { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: 30px; line-height: 1.25; font-style: italic; color: #fff; }
 .quote-mark { color: var(--gold); font-family: Georgia, "Times New Roman", serif; font-size: 54px; line-height: 0; font-weight: 700; vertical-align: -18px; padding: 0 14px; }
 .quote-source { display: block; margin-top: 14px; font-size: 18px; line-height: 1.35; color: #fff; font-family: Montserrat, Arial, Helvetica, sans-serif; }
+.contact-layout { max-width: 700px; }
+.contact-details { font-size: 18px; }
+.contact-details p { margin: 0 0 22px; }
+.contact-details a { color: var(--navy); font-weight: 800; }
+.contact-photo { width: 100%; display: block; box-shadow: 0 18px 30px rgba(0,0,0,.14); }
+.linkedin-contact { display: grid; grid-template-columns: 112px 1fr; gap: 20px; align-items: center; margin-top: 28px; }
+.linkedin-contact img { width: 112px; height: 112px; display: block; }
+.contact-quote { margin-top: 42px; }
 @media (max-width: 1100px) {
   .hero-inner { grid-template-columns: 1fr; min-height: 0; }
   .hero-copy { padding: 68px 34px 26px; }
@@ -140,4 +149,3 @@ p { font-size: 16px; line-height: 1.55; margin: 14px 0; }
   .footer-inner { padding: 28px; align-items: flex-start; }
   .copyright { width: 100%; margin-left: 0; }
 }
-
