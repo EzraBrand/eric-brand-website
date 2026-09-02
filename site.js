@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     button.addEventListener('click', () => {
       const isPaused = marquee.classList.toggle('is-paused');
       button.setAttribute('aria-pressed', String(isPaused));
-      button.textContent = isPaused ? 'Play logo animation' : 'Pause logo animation';
+      button.textContent = isPaused ? 'Play animation' : 'Pause animation';
     });
   });
 });
